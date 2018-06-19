@@ -1,0 +1,13 @@
+---
+- name: To send config to JNPR
+  connection: netconf
+  gather_facts: no
+  tasks:
+    - name: Set shit
+      junos_l2_interface:
+        name: "{{ interface }}"
+        description: interface-access
+        mode: access
+        access_vlan: "{{ vlan }}"
+        active: True
+        state: present
