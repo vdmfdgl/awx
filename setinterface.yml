@@ -1,5 +1,6 @@
 ---
 - name: To send config to JNPR
+  hosts: all
   connection: netconf
   gather_facts: no
   tasks:
